@@ -1,0 +1,21 @@
+# Keep-Alive Configuration
+
+```python
+from axvn-hoding_common.configuration import ConfigurationRestAPI
+from axvn-hoding_sdk_wallet.wallet import Wallet
+from axvn-hoding_sdk_wallet.rest_api.models import AccountInfoResponse
+
+configuration = ConfigurationRestAPI(
+    api_key="your-api-key",
+    api_secret="your-api-secret",
+    keep_alive=False
+)
+client = Wallet(config_rest_api=configuration)
+
+try:
+    response = client.rest_api.account_info()
+    data: AccountInfoResponse = response.data()
+    print(data)
+except Exception as e:
+    print(e)
+```

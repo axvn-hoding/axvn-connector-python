@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "axvn-hoding-sdk-derivatives-trading-coin-futures"
+version = "12.0.1"
+description = "Official axvn-hoding Derivatives Trading Coin Futures SDK - A lightweight library that provides a convenient interface to axvn-hoding's DerivativesTradingCoinFutures REST API, WebSocket API and WebSocket Streams."
+authors = ["axvn-hoding"]
+license = "MIT"
+readme = "README.md"
+include = ["CHANGELOG.md", "LICENSE", "README.md", "src/axvn-hoding_sdk_derivatives_trading_coin_futures/py.typed"]
+packages = [
+  { include = "axvn-hoding_sdk_derivatives_trading_coin_futures", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.15"
+requests = ">=2.34.2"
+urllib3 = ">=2.7.0"
+pydantic = ">=2.10.0"
+websockets = "^15.0.1"
+websocket-client = ">=1.6.3"
+pycryptodome = "^3.17"
+aiohttp = "^3.14.3"
+axvn-hoding-common = "4.2.0"
+
+[tool.poetry.extras]
+dev = ["pytest"]
+
+[tool.poetry.group.dev.dependencies]
+tox = "^4.53.0"
+pytest-asyncio = "^1.0.0"
+black = "^26.3.1"
+ruff = "^0.12.0"
+pytest = ">=9.0.3"
+
+[tool.ruff]
+exclude = [".git", ".tox", "build", "dist"]
+lint.ignore = ["E741"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

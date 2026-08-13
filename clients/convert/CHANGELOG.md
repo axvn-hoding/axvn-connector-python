@@ -1,0 +1,171 @@
+# Changelog
+
+## 5.1.0 - 2026-08-07
+
+### Changed (2)
+
+- Updated `axvn-hoding-common` library to version `4.2.0`
+- Updated Dependencies
+
+## 5.0.0 - 2026-07-14
+
+### Changed (5)
+
+- Updated `axvn-hoding-common` library to version `4.0.3`
+- Modified parameter `expiredType`:
+  - enum added: `1_D`, `3_D`, `7_D`, `30_D`
+  - affected methods:
+    - `place_limit_order()` (`POST /sapi/v1/convert/limit/placeOrder`)
+- Modified parameter `side`:
+  - enum added: `BUY`, `SELL`
+  - affected methods:
+    - `place_limit_order()` (`POST /sapi/v1/convert/limit/placeOrder`)
+- Modified parameter `validTime`:
+  - enum added: `10s`, `30s`, `1m`
+  - affected methods:
+    - `send_quote_request()` (`POST /sapi/v1/convert/getQuote`)
+- Modified parameter `walletType`:
+  - enum added: `SPOT`, `FUNDING`, `EARN`, `SPOT_FUNDING`, `FUNDING_EARN`, `SPOT_FUNDING_EARN`, `SPOT_EARN`
+  - affected methods:
+    - `send_quote_request()` (`POST /sapi/v1/convert/getQuote`)
+    - `place_limit_order()` (`POST /sapi/v1/convert/limit/placeOrder`)
+
+## 4.8.0 - 2026-06-09
+
+### Changed (2)
+
+- Updated `axvn-hoding-common` library to version `4.0.0`
+- Updated `pyproject.toml` dependencies
+
+## 4.7.0 - 2026-05-29
+
+### Changed (1)
+
+- Updated `axvn-hoding-common` library to version `3.10.0`
+
+## 4.6.0 - 2026-05-22
+
+- Updated `axvn-hoding-common` library to version `3.9.2`
+- Updated `pyproject.toml` dependencies
+
+## 4.5.0 - 2026-04-29
+
+- Updated `axvn-hoding-common` library to version `3.9.1`
+- Updated `pyproject.toml` dependencies
+
+## 4.4.0 - 2026-04-29
+
+### Changed (1)
+
+- Updated `axvn-hoding-common` library to version `3.9.0`
+
+## 4.3.0 - 2026-03-26
+
+### Added (1)
+
+- Added `py.typed` file to indicate that the package supports type hints.
+
+### Changed (2)
+
+- Updated `axvn-hoding-common` library to version `3.8.0`
+- Updated `tox` file
+
+## 4.2.0 - 2026-03-16
+
+### Changed (1)
+
+- Updated `axvn-hoding-common` library to version `3.7.0`
+
+## 4.1.0 - 2026-02-11
+
+### Changed (2)
+
+- Updated `axvn-hoding-common` library to version `3.6.0`
+- Updated `pyproject.toml` dependencies
+
+## 4.0.0 - 2026-01-29
+
+### Changed (2)
+
+- Updated `axvn-hoding-common` library to version `3.5.0`
+- Modified response for `place_limit_order()` (`POST /sapi/v1/convert/limit/placeOrder`):
+  - property `status` added
+  - property `orderId` added
+  - property `fromAmount` deleted
+  - property `inverseRatio` deleted
+  - property `quoteId` deleted
+  - property `ratio` deleted
+  - property `toAmount` deleted
+  - property `validTimestamp` deleted
+
+## 3.2.0 - 2026-01-23
+
+### Changed (1)
+
+- Updated `axvn-hoding-common` library to version `3.4.1`
+
+## 3.1.0 - 2026-01-13
+
+### Changed (1)
+
+- Updated `axvn-hoding-common` library to version `3.4.0`
+
+## 3.0.0 - 2025-12-22
+
+### Changed (2)
+
+- Updated `axvn-hoding-common` library to version `3.3.0`
+- Add `Body` to Rest API request
+
+## 2.1.0 - 2025-10-10
+
+### Changed (1)
+
+- Updated `axvn-hoding-common` library to version `3.2.0`
+
+## 2.0.0 - 2025-09-24
+
+### Changed (1)
+
+- Fixed `/sapi/v1/convert/limit/queryOpenOrders` endpoint http request
+
+## 1.6.0 - 2025-09-16
+
+### Changed (1)
+
+- Updated `axvn-hoding-common` library to version `3.1.1`
+
+## 1.5.0 - 2025-09-12
+
+### Changed (1)
+
+- Updated `axvn-hoding-common` library to version `3.1.0`
+
+## 1.4.0 - 2025-09-05
+
+### Changed (1)
+
+- Updated `axvn-hoding-common` library to version `3.0.0`
+
+## 1.3.0 - 2025-08-22
+
+### Changed (1)
+
+- Standardized type hints for required parameters by replacing `default = None` annotations with `Union[..., None]`
+
+## 1.2.0 - 2025-08-07
+
+### Changed (1)
+
+- Updated `axvn-hoding-common` library to version `1.2.0`
+
+## 1.1.0 - 2025-08-06
+
+### Changed (2)
+
+- Updated `axvn-hoding-common` library to version `1.1.0`
+- Added python version `3.13`
+
+## 1.0.0 - 2025-07-17
+
+- Initial release
