@@ -1,0 +1,159 @@
+# Changelog
+
+## 7.1.0 - 2026-08-07
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `4.2.0`
+- Updated Dependencies
+
+## 7.0.0 - 2026-07-14
+
+### Added (1)
+
+- `get_vip_loan_repayment_history()` (`GET /sapi/v1/loan/vip/repay/history`)
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `4.0.3`
+
+## 6.0.0 - 2026-06-29
+
+### Added (2)
+
+- `query_vip_loan_fixed_rate_market()` (`GET /sapi/v1/loan/vip/fixed/market`)
+- `vip_loan_fixed_rate_borrow()` (`POST /sapi/v1/loan/vip/fixed/borrow`)
+
+## 5.9.0 - 2026-06-09
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `4.0.0`
+- Updated `pyproject.toml` dependencies
+
+## 5.8.0 - 2026-05-29
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.10.0`
+
+## 5.7.0 - 2026-05-22
+
+- Updated `axvn-common` library to version `3.9.2`
+- Updated `pyproject.toml` dependencies
+
+## 5.6.0 - 2026-04-29
+
+- Updated `axvn-common` library to version `3.9.1`
+- Updated `pyproject.toml` dependencies
+
+## 5.5.0 - 2026-04-29
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.9.0`
+
+## 5.4.0 - 2026-03-26
+
+### Added (1)
+
+- Added `py.typed` file to indicate that the package supports type hints.
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `3.8.0`
+- Updated `tox` file
+
+## 5.3.0 - 2026-03-16
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.7.0`
+
+## 5.2.0 - 2026-02-11
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `3.6.0`
+- Updated `pyproject.toml` dependencies
+
+## 5.1.0 - 2026-01-29
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.5.0`
+
+## 5.0.0 - 2026-01-23
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `3.4.1`
+- Modified response for `get_vip_loan_ongoing_orders()` (`GET /sapi/v1/loan/vip/ongoing/orders`):
+  - `rows`.items: property `loanRate` added
+  - `rows`.items: item property `loanRate` added
+
+## 4.0.0 - 2026-01-13
+
+### Added (2)
+
+- `get_vip_loan_accrued_interest()` (`GET /sapi/v1/loan/vip/accruedInterest`)
+- `get_vip_loan_interest_rate_history()` (`GET /sapi/v1/loan/vip/interestRateHistory`)
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.4.0`
+
+## 3.0.0 - 2025-12-22
+
+- Updated `axvn-common` library to version `3.3.0`
+- Add `Body` to Rest API request
+
+## 2.3.0 - 2025-10-10
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.2.0`
+
+## 2.2.0 - 2025-09-16
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.1.1`
+
+## 2.1.0 - 2025-09-12
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.1.0`
+
+## 2.0.0 - 2025-09-05
+
+### Changed (2)
+
+- Added parameter `loanTerm`
+  - affected methods:
+    - `vip_loan_borrow()` (`POST /sapi/v1/loan/vip/borrow`)
+- Updated `axvn-common` library to version `3.0.0`
+
+## 1.3.0 - 2025-08-22
+
+### Changed (1)
+
+- Standardized type hints for required parameters by replacing `default = None` annotations with `Union[..., None]`
+
+## 1.2.0 - 2025-08-07
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `1.2.0`
+
+## 1.1.0 - 2025-08-06
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `1.1.0`
+- Added python version `3.13`
+
+## 1.0.0 - 2025-07-17
+
+- Initial release

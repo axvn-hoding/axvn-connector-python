@@ -1,0 +1,216 @@
+# Changelog
+
+## 5.1.0 - 2026-08-07
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `4.2.0`
+- Updated Dependencies
+
+## 5.0.0 - 2026-07-14
+
+### Changed (4)
+
+- Updated `axvn-common` library to version `4.0.3`
+- Deleted parameter `recvWindow`
+  - affected methods:
+    - `get_c2_c_trade_history()` (`GET /sapi/v1/c2c/orderMatch/listUserOrderHistory`)
+- Modified parameter `tradeType`:
+  - enum added: `BUY`, `SELL`
+  - affected methods:
+    - `get_c2_c_trade_history()` (`GET /sapi/v1/c2c/orderMatch/listUserOrderHistory`)
+- Modified response for `get_c2_c_trade_history()` (`GET /sapi/v1/c2c/orderMatch/listUserOrderHistory`):
+  - property `code` added
+  - property `data` added
+  - property `message` added
+  - property `success` added
+  - property `total` added
+  - property `unit_price` deleted
+  - property `adv_no` deleted
+  - property `create_time` deleted
+  - property `asset` deleted
+  - property `counter_part_nick_name` deleted
+  - property `trade_type` deleted
+  - property `order_status` deleted
+  - property `taker_commission` deleted
+  - property `additional_kyc_verify` deleted
+  - property `fiat` deleted
+  - property `order_number` deleted
+  - property `amount` deleted
+  - property `commission` deleted
+  - property `taker_commission_rate` deleted
+  - property `taker_amount` deleted
+  - property `pay_method_name` deleted
+  - property `total_price` deleted
+  - property `fiat_symbol` deleted
+
+## 4.5.0 - 2026-06-09
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `4.0.0`
+- Updated `pyproject.toml` dependencies
+
+## 4.4.0 - 2026-05-29
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.10.0`
+
+## 4.3.0 - 2026-05-22
+
+- Updated `axvn-common` library to version `3.9.2`
+- Updated `pyproject.toml` dependencies
+
+## 4.2.0 - 2026-04-29
+
+- Updated `axvn-common` library to version `3.9.1`
+- Updated `pyproject.toml` dependencies
+
+## 4.1.0 - 2026-04-29
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.9.0`
+
+## 4.0.0 - 2026-04-20
+
+### Changed (1)
+
+- Modified response for `get_c2_c_trade_history()` (`GET /sapi/v1/c2c/orderMatch/listUserOrderHistory`):
+  - property `tradeType` added
+  - property `totalPrice` added
+  - property `orderNumber` added
+  - property `takerCommissionRate` added
+  - property `amount` added
+  - property `asset` added
+  - property `fiat` added
+  - property `orderStatus` added
+  - property `takerAmount` added
+  - property `takerCommission` added
+  - property `counterPartNickName` added
+  - property `commission` added
+  - property `payMethodName` added
+  - property `fiatSymbol` added
+  - property `advNo` added
+  - property `unitPrice` added
+  - property `createTime` added
+  - property `additionalKycVerify` added
+  - property `total` deleted
+  - property `code` deleted
+  - property `data` deleted
+  - property `message` deleted
+  - property `success` deleted
+
+## 3.6.0 - 2026-03-26
+
+### Added (1)
+
+- Added `py.typed` file to indicate that the package supports type hints.
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `3.8.0`
+- Updated `tox` file
+
+## 3.5.0 - 2026-03-16
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.7.0`
+
+## 3.4.0 - 2026-02-11
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `3.6.0`
+- Updated `pyproject.toml` dependencies
+
+## 3.3.0 - 2026-01-29
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.5.0`
+
+## 3.2.0 - 2026-01-23
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.4.1`
+
+## 3.1.0 - 2026-01-13
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.4.0`
+
+## 3.0.0 - 2025-12-22
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `3.3.0`
+- Add `Body` to Rest API request
+
+## 2.0.0 - 2025-11-14
+
+### Changed (6)
+
+- Added parameter `endTimestamp`
+  - affected methods:
+    - `get_c2_c_trade_history()` (`GET /sapi/v1/c2c/orderMatch/listUserOrderHistory`)
+- Added parameter `startTimestamp`
+  - affected methods:
+    - `get_c2_c_trade_history()` (`GET /sapi/v1/c2c/orderMatch/listUserOrderHistory`)
+- Added parameter `rows`
+  - affected methods:
+    - `get_c2_c_trade_history()` (`GET /sapi/v1/c2c/orderMatch/listUserOrderHistory`)
+- Added parameter `tradeType`
+  - affected methods:
+    - `get_c2_c_trade_history()` (`GET /sapi/v1/c2c/orderMatch/listUserOrderHistory`)
+
+## 1.7.0 - 2025-10-10
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.2.0`
+
+## 1.6.0 - 2025-09-16
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.1.1`
+
+## 1.5.0 - 2025-09-12
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.1.0`
+
+## 1.4.0 - 2025-09-05
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.0.0`
+
+## 1.3.0 - 2025-08-22
+
+### Changed (1)
+
+- Standardized type hints for required parameters by replacing `default = None` annotations with `Union[..., None]`
+
+## 1.2.0 - 2025-08-07
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `1.2.0`
+
+## 1.1.0 - 2025-08-06
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `1.1.0`
+- Added python version `3.13`
+
+## 1.0.0 - 2025-07-17
+
+- Initial release

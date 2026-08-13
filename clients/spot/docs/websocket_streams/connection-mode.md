@@ -1,0 +1,39 @@
+# Connection Mode
+
+```python
+import asyncio
+import logging
+
+from axvn_common.configuration import ConfigurationWebSocketStreams
+from axvn_common.constants import WebsocketMode
+from axvn_sdk_spot.spot import Spot
+
+logging.basicConfig(level=logging.INFO)
+
+configuration_ws_streams = ConfigurationWebSocketStreams(mode=WebsocketMode.POOL, pool_size=3)
+
+client = Spot(config_ws_streams=configuration_ws_streams)
+
+
+async def agg_trade():
+    connection = None
+    try:
+        connection = await client.websocket_streams.create_connection()
+
+        stream = await connection.agg_trade(
+            symbol="axvnusdt",
+        )
+        stream.on("message", lambda data: print(f"{data}"))
+
+        await asyncio.sleep(5)
+        await stream.unsuaxvnscribe()
+    except Exception as e:
+        logging.error(f"agg_trade() error: {e}")
+    finally:
+        if connection:
+            await connection.close_connection(close_session=True)
+
+
+if __name__ == "__main__":
+    asyncio.run(agg_trade())
+```

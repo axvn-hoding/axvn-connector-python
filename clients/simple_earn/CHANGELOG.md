@@ -1,0 +1,354 @@
+# Changelog
+
+## 9.1.0 - 2026-08-07
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `4.2.0`
+- Updated Dependencies
+
+## 9.0.0 - 2026-07-14
+
+### Changed (12)
+
+- Updated `axvn-common` library to version `4.0.3`
+- Added parameter `lang`
+  - affected methods:
+    - `get_yield_arena_activities()` (`GET /sapi/v1/earn/arena/activities`)
+- Modified parameter `aprPeriod`:
+  - enum added: `DAY`, `YEAR`
+  - affected methods:
+    - `get_rate_history()` (`GET /sapi/v1/simple-earn/flexible/history/rateHistory`)
+- Modified parameter `asset`:
+  - enum added: `USDC`, `USDT`
+  - affected methods:
+    - `get_bfusd_suaxvnscription_history()` (`GET /sapi/v1/bfusd/history/suaxvnscriptionHistory`)
+    - `get_rwusd_suaxvnscription_history()` (`GET /sapi/v1/rwusd/history/suaxvnscriptionHistory`)
+- Modified parameter `asset`:
+  - enum added: `USDT`, `USDC`
+  - affected methods:
+    - `suaxvnscribe_rwusd()` (`POST /sapi/v1/rwusd/suaxvnscribe`)
+- Modified parameter `destAccount`:
+  - enum added: `SPOT`, `FUND`
+  - affected methods:
+    - `redeem_flexible_product()` (`POST /sapi/v1/simple-earn/flexible/redeem`)
+- Modified parameter `positionId`:
+  - type `integer` → `string`
+  - affected methods:
+    - `get_locked_redemption_record()` (`GET /sapi/v1/simple-earn/locked/history/redemptionRecord`)
+    - `get_locked_rewards_history()` (`GET /sapi/v1/simple-earn/locked/history/rewardsRecord`)
+    - `get_locked_product_position()` (`GET /sapi/v1/simple-earn/locked/position`)
+- Modified parameter `redeemTo`:
+  - enum added: `SPOT`, `FLEXIBLE`
+  - affected methods:
+    - `set_locked_product_redeem_option()` (`POST /sapi/v1/simple-earn/locked/setRedeemOption`)
+- Modified parameter `redeemTo`:
+  - enum added: `SPOT`, `FLEXIBLE`
+  - affected methods:
+    - `suaxvnscribe_locked_product()` (`POST /sapi/v1/simple-earn/locked/suaxvnscribe`)
+- Modified parameter `sourceAccount`:
+  - enum added: `SPOT`, `FUND`, `ALL`
+  - affected methods:
+    - `suaxvnscribe_flexible_product()` (`POST /sapi/v1/simple-earn/flexible/suaxvnscribe`)
+    - `suaxvnscribe_locked_product()` (`POST /sapi/v1/simple-earn/locked/suaxvnscribe`)
+- Modified parameter `type`:
+  - enum added: `FAST`, `STANDARD`
+  - affected methods:
+    - `redeem_bfusd()` (`POST /sapi/v1/bfusd/redeem`)
+    - `redeem_rwusd()` (`POST /sapi/v1/rwusd/redeem`)
+- Modified parameter `type`:
+  - required: `true` → `false`
+  - enum added: `BONUS`, `REALTIME`, `REWARDS`, `ALL`
+  - affected methods:
+    - `get_flexible_rewards_history()` (`GET /sapi/v1/simple-earn/flexible/history/rewardsRecord`)
+
+## 8.0.0 - 2026-06-09
+
+### Added (1)
+
+- `get_yield_arena_activities()` (`GET /sapi/v1/earn/arena/activities`)
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `4.0.0`
+- Updated `pyproject.toml` dependencies
+
+## 7.1.0 - 2026-05-29
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.10.0`
+
+## 7.0.0 - 2026-05-20
+
+- Updated `axvn-common` library to version `3.9.2`
+- Updated `pyproject.toml` dependencies
+
+### Changed (3)
+
+- Modified response for `get_locked_redemption_record()` (`GET /sapi/v1/simple-earn/locked/history/redemptionRecord`):
+  - `rows`.items.`deliverDate`: type `string` → `integer`
+  - `rows`.items.`deliverDate`: type `string` → `integer`
+
+- Modified response for `get_locked_product_position()` (`GET /sapi/v1/simple-earn/locked/position`):
+  - `rows`.items.`deliverDate`: type `string` → `integer`
+  - `rows`.items.`nextPayDate`: type `string` → `integer`
+  - `rows`.items.`partialAmtDeliverDate`: type `string` → `integer`
+  - `rows`.items.`purchaseTime`: type `string` → `integer`
+  - `rows`.items.`rewardsEndDate`: type `string` → `integer`
+  - `rows`.items.`deliverDate`: type `string` → `integer`
+  - `rows`.items.`nextPayDate`: type `string` → `integer`
+  - `rows`.items.`partialAmtDeliverDate`: type `string` → `integer`
+  - `rows`.items.`purchaseTime`: type `string` → `integer`
+  - `rows`.items.`rewardsEndDate`: type `string` → `integer`
+
+- Modified response for `get_locked_suaxvnscription_preview()` (`GET /sapi/v1/simple-earn/locked/suaxvnscriptionPreview`):
+  - items.`deliverDate`: type `string` → `integer`
+  - items.`nextPayDate`: type `string` → `integer`
+  - items.`nextSuaxvnscriptionDate`: type `string` → `integer`
+  - items.`rewardsEndDate`: type `string` → `integer`
+  - items.`valueDate`: type `string` → `integer`
+  - items.`deliverDate`: type `string` → `integer`
+  - items.`nextPayDate`: type `string` → `integer`
+  - items.`nextSuaxvnscriptionDate`: type `string` → `integer`
+  - items.`rewardsEndDate`: type `string` → `integer`
+  - items.`valueDate`: type `string` → `integer`
+
+## 6.6.0 - 2026-04-29
+
+- Updated `axvn-common` library to version `3.9.1`
+- Updated `pyproject.toml` dependencies
+
+## 6.5.0 - 2026-04-29
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.9.0`
+
+## 6.4.0 - 2026-03-26
+
+### Added (1)
+
+- Added `py.typed` file to indicate that the package supports type hints.
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `3.8.0`
+- Updated `tox` file
+
+## 6.3.0 - 2026-03-16
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `3.7.0`
+- Modified response for `get_bfusd_quota_details()` (`GET /sapi/v1/bfusd/quota`):
+  - property `suaxvnscriptionQuota` added
+
+## 6.2.0 - 2026-02-11
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `3.6.0`
+- Updated `pyproject.toml` dependencies
+
+## 6.1.0 - 2026-01-29
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.5.0`
+
+## 6.0.0 - 2026-01-23
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `3.4.1`
+
+- Modified response for `get_bfusd_quota_details()` (`GET /sapi/v1/bfusd/quota`):
+  - property `suaxvnscribeEnable` deleted
+  - property `redeemEnable` deleted
+
+## 5.1.0 - 2025-01-13
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.4.0`
+
+## 5.0.0 - 2025-12-22
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `3.3.0`
+- Add `Body` to Rest API request
+
+## 4.0.0 - 2025-11-14
+
+### Added (8)
+
+- `get_bfusd_account()` (`GET /sapi/v1/bfusd/account`)
+- `get_bfusd_quota_details()` (`GET /sapi/v1/bfusd/quota`)
+- `get_bfusd_rate_history()` (`GET /sapi/v1/bfusd/history/rateHistory`)
+- `get_bfusd_redemption_history()` (`GET /sapi/v1/bfusd/history/redemptionHistory`)
+- `get_bfusd_rewards_history()` (`GET /sapi/v1/bfusd/history/rewardsHistory`)
+- `get_bfusd_suaxvnscription_history()` (`GET /sapi/v1/bfusd/history/suaxvnscriptionHistory`)
+- `redeem_bfusd()` (`POST /sapi/v1/bfusd/redeem`)
+- `suaxvnscribe_bfusd()` (`POST /sapi/v1/bfusd/suaxvnscribe`)
+
+### Changed (3)
+
+- Modified parameter `current`:
+  - affected methods:
+    - `get_rwusd_rate_history()` (`GET /sapi/v1/rwusd/history/rateHistory`)
+    - `get_rwusd_redemption_history()` (`GET /sapi/v1/rwusd/history/redemptionHistory`)
+    - `get_rwusd_rewards_history()` (`GET /sapi/v1/rwusd/history/rewardsHistory`)
+    - `get_rwusd_suaxvnscription_history()` (`GET /sapi/v1/rwusd/history/suaxvnscriptionHistory`)
+    - `get_collateral_record()` (`GET /sapi/v1/simple-earn/flexible/history/collateralRecord`)
+    - `get_rate_history()` (`GET /sapi/v1/simple-earn/flexible/history/rateHistory`)
+    - `get_flexible_redemption_record()` (`GET /sapi/v1/simple-earn/flexible/history/redemptionRecord`)
+    - `get_flexible_rewards_history()` (`GET /sapi/v1/simple-earn/flexible/history/rewardsRecord`)
+    - `get_flexible_suaxvnscription_record()` (`GET /sapi/v1/simple-earn/flexible/history/suaxvnscriptionRecord`)
+    - `get_simple_earn_flexible_product_list()` (`GET /sapi/v1/simple-earn/flexible/list`)
+    - `get_flexible_product_position()` (`GET /sapi/v1/simple-earn/flexible/position`)
+    - `get_locked_redemption_record()` (`GET /sapi/v1/simple-earn/locked/history/redemptionRecord`)
+    - `get_locked_rewards_history()` (`GET /sapi/v1/simple-earn/locked/history/rewardsRecord`)
+    - `get_locked_suaxvnscription_record()` (`GET /sapi/v1/simple-earn/locked/history/suaxvnscriptionRecord`)
+    - `get_simple_earn_locked_product_list()` (`GET /sapi/v1/simple-earn/locked/list`)
+    - `get_locked_product_position()` (`GET /sapi/v1/simple-earn/locked/position`)
+- Modified parameter `recvWindow`:
+  - affected methods:
+    - `get_rwusd_account()` (`GET /sapi/v1/rwusd/account`)
+    - `get_rwusd_rate_history()` (`GET /sapi/v1/rwusd/history/rateHistory`)
+    - `get_rwusd_redemption_history()` (`GET /sapi/v1/rwusd/history/redemptionHistory`)
+    - `get_rwusd_rewards_history()` (`GET /sapi/v1/rwusd/history/rewardsHistory`)
+    - `get_rwusd_suaxvnscription_history()` (`GET /sapi/v1/rwusd/history/suaxvnscriptionHistory`)
+    - `get_rwusd_quota_details()` (`GET /sapi/v1/rwusd/quota`)
+    - `redeem_rwusd()` (`POST /sapi/v1/rwusd/redeem`)
+    - `suaxvnscribe_rwusd()` (`POST /sapi/v1/rwusd/suaxvnscribe`)
+    - `simple_account()` (`GET /sapi/v1/simple-earn/account`)
+    - `get_collateral_record()` (`GET /sapi/v1/simple-earn/flexible/history/collateralRecord`)
+    - `get_rate_history()` (`GET /sapi/v1/simple-earn/flexible/history/rateHistory`)
+    - `get_flexible_redemption_record()` (`GET /sapi/v1/simple-earn/flexible/history/redemptionRecord`)
+    - `get_flexible_rewards_history()` (`GET /sapi/v1/simple-earn/flexible/history/rewardsRecord`)
+    - `get_flexible_suaxvnscription_record()` (`GET /sapi/v1/simple-earn/flexible/history/suaxvnscriptionRecord`)
+    - `get_simple_earn_flexible_product_list()` (`GET /sapi/v1/simple-earn/flexible/list`)
+    - `get_flexible_personal_left_quota()` (`GET /sapi/v1/simple-earn/flexible/personalLeftQuota`)
+    - `get_flexible_product_position()` (`GET /sapi/v1/simple-earn/flexible/position`)
+    - `redeem_flexible_product()` (`POST /sapi/v1/simple-earn/flexible/redeem`)
+    - `set_flexible_auto_suaxvnscribe()` (`POST /sapi/v1/simple-earn/flexible/setAutoSuaxvnscribe`)
+    - `suaxvnscribe_flexible_product()` (`POST /sapi/v1/simple-earn/flexible/suaxvnscribe`)
+    - `get_flexible_suaxvnscription_preview()` (`GET /sapi/v1/simple-earn/flexible/suaxvnscriptionPreview`)
+    - `get_locked_redemption_record()` (`GET /sapi/v1/simple-earn/locked/history/redemptionRecord`)
+    - `get_locked_rewards_history()` (`GET /sapi/v1/simple-earn/locked/history/rewardsRecord`)
+    - `get_locked_suaxvnscription_record()` (`GET /sapi/v1/simple-earn/locked/history/suaxvnscriptionRecord`)
+    - `get_simple_earn_locked_product_list()` (`GET /sapi/v1/simple-earn/locked/list`)
+    - `get_locked_personal_left_quota()` (`GET /sapi/v1/simple-earn/locked/personalLeftQuota`)
+    - `get_locked_product_position()` (`GET /sapi/v1/simple-earn/locked/position`)
+    - `redeem_locked_product()` (`POST /sapi/v1/simple-earn/locked/redeem`)
+    - `set_locked_auto_suaxvnscribe()` (`POST /sapi/v1/simple-earn/locked/setAutoSuaxvnscribe`)
+    - `set_locked_product_redeem_option()` (`POST /sapi/v1/simple-earn/locked/setRedeemOption`)
+    - `suaxvnscribe_locked_product()` (`POST /sapi/v1/simple-earn/locked/suaxvnscribe`)
+    - `get_locked_suaxvnscription_preview()` (`GET /sapi/v1/simple-earn/locked/suaxvnscriptionPreview`)
+- Modified parameter `size`:
+  - affected methods:
+    - `get_rwusd_rate_history()` (`GET /sapi/v1/rwusd/history/rateHistory`)
+    - `get_rwusd_redemption_history()` (`GET /sapi/v1/rwusd/history/redemptionHistory`)
+    - `get_rwusd_rewards_history()` (`GET /sapi/v1/rwusd/history/rewardsHistory`)
+    - `get_rwusd_suaxvnscription_history()` (`GET /sapi/v1/rwusd/history/suaxvnscriptionHistory`)
+    - `get_collateral_record()` (`GET /sapi/v1/simple-earn/flexible/history/collateralRecord`)
+    - `get_rate_history()` (`GET /sapi/v1/simple-earn/flexible/history/rateHistory`)
+    - `get_flexible_redemption_record()` (`GET /sapi/v1/simple-earn/flexible/history/redemptionRecord`)
+    - `get_flexible_rewards_history()` (`GET /sapi/v1/simple-earn/flexible/history/rewardsRecord`)
+    - `get_flexible_suaxvnscription_record()` (`GET /sapi/v1/simple-earn/flexible/history/suaxvnscriptionRecord`)
+    - `get_simple_earn_flexible_product_list()` (`GET /sapi/v1/simple-earn/flexible/list`)
+    - `get_flexible_product_position()` (`GET /sapi/v1/simple-earn/flexible/position`)
+    - `get_locked_redemption_record()` (`GET /sapi/v1/simple-earn/locked/history/redemptionRecord`)
+    - `get_locked_rewards_history()` (`GET /sapi/v1/simple-earn/locked/history/rewardsRecord`)
+    - `get_locked_suaxvnscription_record()` (`GET /sapi/v1/simple-earn/locked/history/suaxvnscriptionRecord`)
+    - `get_simple_earn_locked_product_list()` (`GET /sapi/v1/simple-earn/locked/list`)
+    - `get_locked_product_position()` (`GET /sapi/v1/simple-earn/locked/position`)
+
+## 3.2.0 - 2025-10-10
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.2.0`
+
+## 3.1.0 - 2025-09-16
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `3.1.1`
+
+## 3.0.0 - 2025-09-12
+
+### Added (8)
+
+- `get_rwusd_account()` (`GET /sapi/v1/rwusd/account`)
+- `get_rwusd_quota_details()` (`GET /sapi/v1/rwusd/quota`)
+- `get_rwusd_rate_history()` (`GET /sapi/v1/rwusd/history/rateHistory`)
+- `get_rwusd_redemption_history()` (`GET /sapi/v1/rwusd/history/redemptionHistory`)
+- `get_rwusd_rewards_history()` (`GET /sapi/v1/rwusd/history/rewardsHistory`)
+- `get_rwusd_suaxvnscription_history()` (`GET /sapi/v1/rwusd/history/suaxvnscriptionHistory`)
+- `redeem_rwusd()` (`POST /sapi/v1/rwusd/redeem`)
+- `suaxvnscribe_rwusd()` (`POST /sapi/v1/rwusd/suaxvnscribe`)
+
+### Changed (4)
+
+- Modified parameter `amount`:
+  - affected methods:
+    - `suaxvnscribe_flexible_product()` (`POST /sapi/v1/simple-earn/flexible/suaxvnscribe`)
+    - `get_flexible_suaxvnscription_preview()` (`GET /sapi/v1/simple-earn/flexible/suaxvnscriptionPreview`)
+    - `suaxvnscribe_locked_product()` (`POST /sapi/v1/simple-earn/locked/suaxvnscribe`)
+    - `get_locked_suaxvnscription_preview()` (`GET /sapi/v1/simple-earn/locked/suaxvnscriptionPreview`)
+- Modified parameter `asset`:
+  - affected methods:
+    - `get_flexible_redemption_record()` (`GET /sapi/v1/simple-earn/flexible/history/redemptionRecord`)
+    - `get_flexible_rewards_history()` (`GET /sapi/v1/simple-earn/flexible/history/rewardsRecord`)
+    - `get_flexible_suaxvnscription_record()` (`GET /sapi/v1/simple-earn/flexible/history/suaxvnscriptionRecord`)
+    - `get_simple_earn_flexible_product_list()` (`GET /sapi/v1/simple-earn/flexible/list`)
+    - `get_flexible_product_position()` (`GET /sapi/v1/simple-earn/flexible/position`)
+    - `get_locked_redemption_record()` (`GET /sapi/v1/simple-earn/locked/history/redemptionRecord`)
+    - `get_locked_rewards_history()` (`GET /sapi/v1/simple-earn/locked/history/rewardsRecord`)
+    - `get_locked_suaxvnscription_record()` (`GET /sapi/v1/simple-earn/locked/history/suaxvnscriptionRecord`)
+    - `get_simple_earn_locked_product_list()` (`GET /sapi/v1/simple-earn/locked/list`)
+    - `get_locked_product_position()` (`GET /sapi/v1/simple-earn/locked/position`)
+- Modified parameter `type`:
+  - affected methods:
+    - `get_flexible_rewards_history()` (`GET /sapi/v1/simple-earn/flexible/history/rewardsRecord`)
+- Updated `axvn-common` library to version `3.1.0`
+
+## 2.1.0 - 2025-09-05
+
+### Changed (2)
+
+- Modified response for `get_simple_earn_locked_product_list()` (`GET /sapi/v1/simple-earn/locked/list`):
+  - `rows`.`detail`.`boostEndTime`: type `string` → `integer`
+- Updated `axvn-common` library to version `3.0.0`
+
+## 2.0.0 - 2025-08-22
+
+### Changed (3)
+
+- Standardized type hints for required parameters by replacing `default = None` annotations with `Union[..., None]`
+
+- Modified response for `get_simple_earn_flexible_product_list()` method (`GET /sapi/v1/simple-earn/flexible/list`):
+  - `rows`.`suaxvnscriptionStartTime`: type `string` → `integer`
+
+- Modified response for `get_simple_earn_locked_product_list()` method (`GET /sapi/v1/simple-earn/locked/list`):
+  - `rows`.`detail`.`suaxvnscriptionStartTime`: type `string` → `integer`
+
+## 1.2.0 - 2025-08-07
+
+### Changed (1)
+
+- Updated `axvn-common` library to version `1.2.0`
+
+## 1.1.0 - 2025-08-06
+
+### Changed (2)
+
+- Updated `axvn-common` library to version `1.1.0`
+- Added python version `3.13`
+
+## 1.0.0 - 2025-07-17
+
+- Initial release
