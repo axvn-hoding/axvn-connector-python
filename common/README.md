@@ -4,7 +4,7 @@
 [![PyPI version](https://img.shields.io/pypi/v/axvn-common)](https://pypi.python.org/pypi/axvn-common)
 [![PyPI Downloads](https://img.shields.io/pypi/dm/axvn-common.svg)](https://pypi.org/project/axvn-common/)
 [![Python version](https://img.shields.io/pypi/pyversions/axvn-common)](https://www.python.org/downloads/)
-[![Known Vulnerabilities](https://img.shields.io/badge/security-scanned-brightgreen)](https://github.com/alisababivip/axvn-connector-python/security)
+[![Known Vulnerabilities](https://img.shields.io/badge/security-scanned-brightgreen)](https://github.com/nham-quoc-huan/axvn-connector-python/security)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 `axvn-common` is a **utility package** for Axvn modular connectors, providing commonly used functions and helpers for working with Axvn REST/WebSocket APIs. It ensures reusable and optimized utilities to streamline development.

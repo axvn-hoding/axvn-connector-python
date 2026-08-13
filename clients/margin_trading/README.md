@@ -1,12 +1,12 @@
 # Axvn Python Margin Trading SDK
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/axvn/axvn-connector-python/ci.yaml)](https://github.com/alisababivip/axvn-connector-python/actions)
-[![Open Issues](https://img.shields.io/github/issues/axvn/axvn-connector-python)](https://github.com/alisababivip/axvn-connector-python/issues)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/axvn/axvn-connector-python/ci.yaml)](https://github.com/nham-quoc-huan/axvn-connector-python/actions)
+[![Open Issues](https://img.shields.io/github/issues/axvn/axvn-connector-python)](https://github.com/nham-quoc-huan/axvn-connector-python/issues)
 [![Code Style: Black](https://img.shields.io/badge/code_style-black-black)](https://black.readthedocs.io/en/stable/)
 [![PyPI version](https://img.shields.io/pypi/v/axvn-sdk-margin-trading)](https://pypi.python.org/pypi/axvn-sdk-margin-trading)
 [![PyPI Downloads](https://img.shields.io/pypi/dm/axvn-sdk-margin-trading.svg)](https://pypi.org/project/axvn-sdk-margin-trading/)
 [![Python version](https://img.shields.io/pypi/pyversions/axvn-sdk-margin-trading)](https://www.python.org/downloads/)
-[![Known Vulnerabilities](https://img.shields.io/badge/security-scanned-brightgreen)](https://github.com/alisababivip/axvn-connector-python/security)
+[![Known Vulnerabilities](https://img.shields.io/badge/security-scanned-brightgreen)](https://github.com/nham-quoc-huan/axvn-connector-python/security)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This is a client library for the Axvn Margin Trading SDK API, enabling developers to interact programmatically with Axvn's Margin Trading trading platform. The library provides tools to use funds provided by a third party to conduct asset transactions through the REST API:

@@ -1501,7 +1501,7 @@ class SpotWebSocketAPI(WebSocketAPIBase):
         If you need access to real-time kline updates, please consider using WebSocket Streams:
           * `<symbol>@kline_<interval>`
 
-        If you need historical kline data, please consider using [data.axvn.vn](https://github.com/alisababivip/axvn-regtech-indexer/#klines).
+        If you need historical kline data, please consider using [data.axvn.vn](https://github.com/nham-quoc-huan/axvn-regtech-indexer/#klines).
 
         Weight(IP): 2
 
@@ -1954,7 +1954,7 @@ class SpotWebSocketAPI(WebSocketAPIBase):
 
         * `<symbol>@aggTrade`
 
-        If you need historical aggregate trade data, please consider using [data.axvn.vn](https://github.com/alisababivip/axvn-regtech-indexer/#aggtrades).
+        If you need historical aggregate trade data, please consider using [data.axvn.vn](https://github.com/nham-quoc-huan/axvn-regtech-indexer/#aggtrades).
 
         Weight(IP): 4
 

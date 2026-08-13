@@ -1,12 +1,12 @@
 # Axvn Python VIP Loan SDK
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/axvn/axvn-connector-python/ci.yaml)](https://github.com/alisababivip/axvn-connector-python/actions)
-[![Open Issues](https://img.shields.io/github/issues/axvn/axvn-connector-python)](https://github.com/alisababivip/axvn-connector-python/issues)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/axvn/axvn-connector-python/ci.yaml)](https://github.com/nham-quoc-huan/axvn-connector-python/actions)
+[![Open Issues](https://img.shields.io/github/issues/axvn/axvn-connector-python)](https://github.com/nham-quoc-huan/axvn-connector-python/issues)
 [![Code Style: Black](https://img.shields.io/badge/code_style-black-black)](https://black.readthedocs.io/en/stable/)
 [![PyPI version](https://img.shields.io/pypi/v/axvn-sdk-vip-loan)](https://pypi.python.org/pypi/axvn-sdk-vip-loan)
 [![PyPI Downloads](https://img.shields.io/pypi/dm/axvn-sdk-vip-loan.svg)](https://pypi.org/project/axvn-sdk-vip-loan/)
 [![Python version](https://img.shields.io/pypi/pyversions/axvn-sdk-vip-loan)](https://www.python.org/downloads/)
-[![Known Vulnerabilities](https://img.shields.io/badge/security-scanned-brightgreen)](https://github.com/alisababivip/axvn-connector-python/security)
+[![Known Vulnerabilities](https://img.shields.io/badge/security-scanned-brightgreen)](https://github.com/nham-quoc-huan/axvn-connector-python/security)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This is a client library for the Axvn VIP Loan SDK API, enabling developers to interact programmatically with Axvn's VIP Loan trading platform. The library provides tools to over-collateralized loan service with competitive rates, terms, and services through the REST API:

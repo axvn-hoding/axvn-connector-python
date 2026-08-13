@@ -1,0 +1,83 @@
+name: Deploy Python SDK Docs → sdk-py.axvn.vn
+
+on:
+  push:
+    branches: [axvn-main, main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build static site
+        run: |
+          mkdir -p _site
+          cp README.md _site/ 2>/dev/null || true
+          cp MIGRATION.md _site/ 2>/dev/null || true
+
+          cat > _site/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <title>AXVN Python Connector SDK</title>
+            <style>
+              body { font-family: system-ui, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; }
+              h1 { color: #1a1a2e; } a { color: #3b82d4; }
+              pre { background: #f7f8fa; padding: 12px; border-radius: 6px; overflow-x: auto; }
+            </style>
+          </head>
+          <body>
+            <h1>AXVN Python Connector SDK</h1>
+            <p><strong>sdk-py.axvn.vn</strong> — Auto-generated Python connectors for AXVN APIs.</p>
+            <h2>Install</h2>
+            <pre>pip install axvn-common</pre>
+            <h2>Clients Available</h2>
+            <ul>
+              <li>Spot, Margin, Derivatives (USDS, COIN-M, Options, PM)</li>
+              <li>Wallet, Sub-Account, Simple Earn, Staking, Copy Trading</li>
+              <li>Web3 Wallet, C2C, Fiat, Gift Card</li>
+            </ul>
+            <h2>Quick Start</h2>
+            <pre>from axvn_common.configuration import ConfigurationRestAPI
+          config = ConfigurationRestAPI(api_key="...", api_secret="...")
+          </pre>
+            <p><a href="https://github.com/axvn-hoding/axvn-connector-python">View on GitHub</a></p>
+          </body>
+          </html>
+          EOF
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

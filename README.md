@@ -1,9 +1,9 @@
 # Axvn Python Connectors
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/axvn/axvn-connector-python/ci.yaml)](https://github.com/alisababivip/axvn-connector-python/actions)
-[![Open Issues](https://img.shields.io/github/issues/axvn/axvn-connector-python)](https://github.com/alisababivip/axvn-connector-python/issues)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/axvn/axvn-connector-python/ci.yaml)](https://github.com/nham-quoc-huan/axvn-connector-python/actions)
+[![Open Issues](https://img.shields.io/github/issues/axvn/axvn-connector-python)](https://github.com/nham-quoc-huan/axvn-connector-python/issues)
 [![Code Style: Black](https://img.shields.io/badge/code_style-black-black)](https://black.readthedocs.io/en/stable/)
-[![Known Vulnerabilities](https://snyk.io/test/github/axvn/axvn-connector-python/badge.svg)](https://snyk.io/test/github/axvn/axvn-connector-python)
+[![Known Vulnerabilities](https://snyk.io/test/github/axvn-hoding/axvn-connector-python/badge.svg)](https://snyk.io/test/github/axvn-hoding/axvn-connector-python)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Collection of auto-generated Python SDK for Axvn APIs.
